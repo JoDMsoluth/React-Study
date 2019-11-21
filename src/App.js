@@ -53,13 +53,23 @@
 
 // day1- CSS Module --------------------------------------------
 import React, { Component } from "react";
-import styles from "./App.css";
-
-console.log(styles); // 콘솔에 무엇이 출력되는지 확인해 보세요!
+import RenderCallbackMenu from "./day2/RenderCallback";
 
 class App extends Component {
   render() {
-    return <div className={styles.box}></div>;
+    return (
+      <div>
+        <RenderCallbackMenu title="First Menu">
+          <p>Some contnet</p>
+        </RenderCallbackMenu>
+        <RenderCallbackMenu title="Second Menu">
+          <p>Some contnet</p>
+        </RenderCallbackMenu>
+        <RenderCallbackMenu title="Third Menu">
+          <p>Some contnet</p>
+        </RenderCallbackMenu>
+      </div>
+    );
   }
 }
 
