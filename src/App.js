@@ -52,25 +52,44 @@
 // export default App;
 
 // day1- CSS Module --------------------------------------------
-import React, { Component } from "react";
-import RenderCallbackMenu from "./day2/RenderCallback";
+// import React, { Component } from "react";
+// import RenderCallbackMenu from "./day2/RenderCallback";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <RenderCallbackMenu title="First Menu">
-          <p>Some contnet</p>
-        </RenderCallbackMenu>
-        <RenderCallbackMenu title="Second Menu">
-          <p>Some contnet</p>
-        </RenderCallbackMenu>
-        <RenderCallbackMenu title="Third Menu">
-          <p>Some contnet</p>
-        </RenderCallbackMenu>
-      </div>
-    );
-  }
-}
+// class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <RenderCallbackMenu title="First Menu">
+//           <p>Some contnet</p>
+//         </RenderCallbackMenu>
+//         <RenderCallbackMenu title="Second Menu">
+//           <p>Some contnet</p>
+//         </RenderCallbackMenu>
+//         <RenderCallbackMenu title="Third Menu">
+//           <p>Some contnet</p>
+//         </RenderCallbackMenu>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+// day2- function as children --------------------------------------------
+
+import React from "react";
+import { Route } from "react-router-dom";
+import { Home, About, Posts } from "./day3/pages";
+import Menu from "./day3/components/Menu";
+
+const App = () => {
+  return (
+    <div>
+      <Menu />
+      <Route exact path="/" component={Home} />
+      <Route path="/about/:name?" component={About} />
+      <Route path="/posts" component={Posts} />
+    </div>
+  );
+};
 
 export default App;
