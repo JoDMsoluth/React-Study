@@ -78,7 +78,7 @@
 
 import React from "react";
 import { Route } from "react-router-dom";
-import { Home, About, Posts } from "./day3/pages";
+import { Home, About, Posts } from "./day3/pages/index.async";
 import Menu from "./day3/components/Menu";
 
 const App = () => {
